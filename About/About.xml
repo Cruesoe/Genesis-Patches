@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-  <name>Genesis Patches</name>
+  <name>Genesis: Patches</name>
   <author>Cruesoe</author>
   <packageId>cruesoe.genesispatches</packageId>
   <modVersion IgnoreIfNoMatchingField="True">261116</modVersion>
