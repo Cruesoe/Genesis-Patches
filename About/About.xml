@@ -23,5 +23,7 @@ Fixes small conflicts between mods in the pack, and hides a few known, harmless 
     <li>brrainz.harmony</li>
     <li>ferny.noderesearch</li>
     <li>ferny.progressionagriculture</li>
+    <li>Rosalina.Mating.Press</li>
+    <li>WhoUp.TweakingThey.BalanceRn</li>
   </loadAfter>
 </ModMetaData>
