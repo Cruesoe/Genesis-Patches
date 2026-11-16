@@ -10,11 +10,12 @@ namespace GenesisPatches
         private static readonly string[][] KnownErrors =
         {
             // Better Architect Menu gates its Vehicle Map Framework folder with IfModActiveAny, which RimWorld ignores (reported to ferny, 261116)
-            new[] { "DesignationCategoryDef", "VMF_VehicleMap" },
+            new[] { "Better Architect Menu", "DesignationCategoryDef", "VMF_VehicleMap" },
             // TD Find Lib - Continued looks for a Float Sub-Menus compatibility assembly that it doesn't ship (261115)
             new[] { "Float Sub-Menu is installed, but TD Compatibility for it isn't" },
         };
 
+        // Set only while this call logs its info line, so a re-entered Log.Error passes through; reset in finally
         [ThreadStatic] private static bool inFilter;
 
         public static bool Prefix(string text)
