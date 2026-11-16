@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Progression: Agriculture removes the Devilstrand research project; drop it from Node Research's Armour cluster seeds when it is gone -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ResearchProjectDef[defName="Devilstrand"]</xpath>
+    <nomatch Class="PatchOperationRemove">
+      <xpath>Defs/BetterResearchMenu.ResearchClusterDef[defName="Ferny_CloudArmour"]/seeds/li[text()="Devilstrand"]</xpath>
+    </nomatch>
+  </Operation>
+</Patch>

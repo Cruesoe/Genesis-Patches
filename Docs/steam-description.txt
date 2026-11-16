@@ -1,0 +1,11 @@
+[b]Fixes and clean-up for the Genesis Mod Pack and its Combat Extended edition.[/b]
+
+[h2]Features[/h2]
+[list]
+[*]Fixes small conflicts between mods in the pack.
+[*]Hides a few known, harmless startup errors from other mods while their authors work on fixes, so the errors you do see are ones that matter.
+[*]Each hidden error is noted in the log as an info line instead, and every other error is left untouched.
+[/list]
+
+[h2]Compatibility[/h2]
+Made for the Genesis Mod Pack and its Combat Extended edition, and included in both. Safe to add to an existing save.

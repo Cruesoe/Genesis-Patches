@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>GenesisPatches</RootNamespace>
+    <AssemblyName>GenesisPatches</AssemblyName>
+    <Nullable>enable</Nullable>
+    <UnityModules>CoreModule</UnityModules>
+  </PropertyGroup>
+
+</Project>
