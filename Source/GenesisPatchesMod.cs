@@ -1,4 +1,5 @@
 using HarmonyLib;
+using RimWorld;
 using Verse;
 
 namespace GenesisPatches
@@ -12,6 +13,9 @@ namespace GenesisPatches
             harmony.Patch(
                 AccessTools.Method(typeof(Log), nameof(Log.Error), new[] { typeof(string) }),
                 prefix: new HarmonyMethod(typeof(KnownErrorFilter), nameof(KnownErrorFilter.Prefix)));
+            harmony.Patch(
+                AccessTools.Method(typeof(Alert_NeedResearchBench), nameof(Alert_NeedResearchBench.GetReport)),
+                postfix: new HarmonyMethod(typeof(ResearchBenchAlertFilter), nameof(ResearchBenchAlertFilter.Postfix)));
         }
     }
 }
