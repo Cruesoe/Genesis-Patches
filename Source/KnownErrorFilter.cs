@@ -3,7 +3,7 @@ using Verse;
 
 namespace GenesisPatches
 {
-    // Turns known, harmless errors from other mods into info lines; every other error passes through unchanged
+    // Turns known, harmless errors and warnings from other mods into info lines; everything else passes through unchanged
     public static class KnownErrorFilter
     {
         // Each entry: every fragment must appear in the message. Remove an entry once its mod is fixed.
@@ -13,6 +13,8 @@ namespace GenesisPatches
             new[] { "Better Architect Menu", "DesignationCategoryDef", "VMF_VehicleMap" },
             // TD Find Lib - Continued looks for a Float Sub-Menus compatibility assembly that it doesn't ship (261115)
             new[] { "Float Sub-Menu is installed, but TD Compatibility for it isn't" },
+            // Nuff's Auto-Patcher ships a 1.6 Vehicle Framework add-on built against a newer core, so every vehicle it patches throws (261118)
+            new[] { "nuff.AutoPatcherCombatExtended.DefDataHolder.StartNewLogEntry" },
         };
 
         // Set only while this call logs its info line, so a re-entered Log.Error passes through; reset in finally
@@ -26,7 +28,7 @@ namespace GenesisPatches
             inFilter = true;
             try
             {
-                Log.Message("[Genesis Patches] Known error hidden: " + LineWith(text, match[0]));
+                Log.Message("[Genesis Patches] Known message hidden:" + LineWith(text, match[0]));
             }
             finally
             {
