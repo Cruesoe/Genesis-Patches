@@ -28,7 +28,7 @@ namespace GenesisPatches
             inFilter = true;
             try
             {
-                Log.Message("[Genesis Patches] Known error hidden: " + LineWith(text, match[0]));
+                Log.Message("[Genesis Patches] Known message hidden:" + LineWith(text, match[0]));
             }
             finally
             {
