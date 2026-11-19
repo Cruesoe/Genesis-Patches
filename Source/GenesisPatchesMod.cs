@@ -19,6 +19,9 @@ namespace GenesisPatches
             harmony.Patch(
                 AccessTools.Method(typeof(Alert_NeedResearchBench), nameof(Alert_NeedResearchBench.GetReport)),
                 postfix: new HarmonyMethod(typeof(ResearchBenchAlertFilter), nameof(ResearchBenchAlertFilter.Postfix)));
+#if RIMWORLD_1_7
+            LetterStackCleanerMouseButtons.Apply(harmony);
+#endif
         }
     }
 }

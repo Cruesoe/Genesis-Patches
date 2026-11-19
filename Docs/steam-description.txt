@@ -3,6 +3,7 @@
 [h2]Features[/h2]
 [list]
 [*]Fixes small conflicts between mods in the pack.
+[*]Makes the fourth and fifth mouse buttons work again as Letter Stack Cleaner's key on RimWorld 1.7.
 [*]Hides the "Need research bench" alert until you have unlocked a research bench.
 [*]Hides a few known, harmless startup errors from other mods while their authors work on fixes, so the errors you do see are ones that matter.
 [*]Each hidden error is noted in the log as an info line instead, and every other error is left untouched.
